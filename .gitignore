@@ -3,10 +3,12 @@
 *.lo
 *.o
 *.obj
+*.dblite
 
 # Precompiled Headers
 *.gch
 *.pch
+*.pcm
 
 # Compiled Dynamic libraries
 *.so
@@ -27,3 +29,9 @@
 *.exe
 *.out
 *.app
+*app
+
+# more
+*.root
+*.lis
+*color_SConscript

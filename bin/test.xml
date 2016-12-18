@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<Task name="flm" type="StMiniMcAnalyzer" config="" nodePath="MiniAna" />
+	<Logger color="true" globalLogLevel="all" />
+	
+	<MiniAna>
+		<Logger color="true" globalLogLevel="info" />
+		<EventLoop progress="true" />
+	
+		<input>
+			<dst splitBy="22" treeName="StMiniMcTree" url="mini.lis" nEvents="100"/>
+		</input>
+
+		<output>
+			<TFile url="MiniAna.root" />
+		</output>
+
+		<histograms>
+			<Histo name="mc_pT" title="MC pT" bins_x="bins.pt" />
+			<Histo name="rc_pT" title="RECO pT" bins_x="bins.pt" />
+		</histograms>
+
+		
+
+	</MiniAna>
+
+	<bins>
+		<pt width="0.1" min="0" max="10" />
+	</bins>
+</config>
